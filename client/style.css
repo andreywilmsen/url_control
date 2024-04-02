@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 350px;
+}
+
+#inputBox {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputBox input {
+    width: 320px;
+    height: 30px;
+    margin: 20px 0px;
+    border-radius: 8px;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+#inputBox button {
+    width: 270px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.466);
+    box-shadow: 1px 1px 14px 14px rgba(128, 128, 128, 0.144);
+}
+#inputBox button:hover {
+    transition: 0.4s;
+    transform: scale(1.04, 1.04);
+    cursor: pointer;
+    box-shadow: 1px 1px 14px 10px rgba(107, 107, 107, 0.336);
+}
+
+.commandBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.buttonsArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonEdit,
+.buttonDelete {
+    height: 30px;
+    width: 100px;
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.26);
+    border-radius: 3px;
+    margin: 0px 1px;
+}
+
+.buttonEdit {
+    background-color: rgb(0, 132, 255);
+}
+
+.buttonDelete {
+    background-color: rgb(255, 53, 53);
+}
+
+.title_url {
+    font-weight: 600;
+}
+
+.itemUrl {
+    margin: 20px auto;
+    width: 50%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 14px 14px rgba(128, 128, 128, 0.144);
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.466);
+    padding: 15px;
+}
+
+@media (max-width: 700px) {
+    .itemUrl {
+        width: 90%;
+        height: 100%;
+    }
+}
+
+.itemUrl h1 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    width: 70%;
+}
+
+.descBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descBox > a {
+    margin: 0px 15px;
+}
+
+.url {
+    color: gray;
+}
+
+.clicks {
+    color: rgb(0, 119, 255);
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.descBox > span {
+    width: 70%;
+}
