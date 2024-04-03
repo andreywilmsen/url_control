@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', atualizarUrl)
 function atualizarUrl() {
     let divUrl = document.getElementById('urls')
     divUrl.innerHTML = "";
-    fetch("http://localhost:8080/get").then(res => {
+    fetch("https://url-control.onrender.com/get").then(res => {
         return res.json();
     }).then(json => {
         for (url of json) {
@@ -35,7 +35,7 @@ function postUrl() {
     let description = document.getElementById('description').value;
     let url = document.getElementById('url').value;
 
-    fetch("http://localhost:8080/post", {
+    fetch("https://url-control.onrender.com/post", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, description, url })
@@ -54,7 +54,7 @@ function addClick(el) {
     const elemento = el.parentElement.parentElement.parentElement.children[0].children[0].innerText;
     let title = elemento.toLowerCase();
     console.log(title)
-    fetch(`http://localhost:8080/addClick/${title}`, {
+    fetch(`https://url-control.onrender.com/addClick/${title}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
     }).then(res => {
@@ -92,7 +92,7 @@ function deletePost(el) {
     let title = (elemento.children[0].innerText).toLowerCase();
 
 
-    fetch(`http://localhost:8080/delete`, {
+    fetch(`https://url-control.onrender.com/delete`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title: title })
@@ -112,7 +112,7 @@ function updateValues() {
     let description = document.getElementById('description').value;
     let url = document.getElementById('url').value;
 
-    fetch("http://localhost:8080/edit", {
+    fetch("https://url-control.onrender.com/edit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, description, url })
