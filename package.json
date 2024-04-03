@@ -4,5 +4,9 @@
     "express": "^4.19.2",
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.4"
+  },
+  "scripts":{
+    "build": "npm build",
+    "start": "node index.js"
   }
 }
